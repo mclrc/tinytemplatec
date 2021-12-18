@@ -1,10 +1,14 @@
 {
   "name": "tinytemplatec",
   "type": "module",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Lightweight, zero-dependency HTML template compiler with support for vue-like directives. Can be used for basic front-end frameworks",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pixldemon/tinytemplatec"
+  },
   "scripts": {
     "build": "tsc --skipLibCheck",
     "watch": "tsc -w --skipLibCheck"
