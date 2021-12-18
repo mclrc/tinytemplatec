@@ -1,0 +1,25 @@
+{
+  "name": "tinytemplatec",
+  "type": "module",
+  "version": "0.0.1",
+  "description": "Lightweight, zero-dependency HTML template compiler with support for vue-like directives. Can be used for basic front-end frameworks",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc --skipLibCheck",
+    "watch": "tsc -w --skipLibCheck"
+  },
+  "keywords": [
+    "template engine",
+    "template compiler",
+    "front-end",
+    "framework",
+    "parser",
+    "lightweight",
+    "zero-dependency"
+  ],
+  "author": "Moritz Clerc <moritzamando@protonmail.com>",
+  "license": "ISC",
+  "devDependencies": {},
+  "dependencies": {}
+}

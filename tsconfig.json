@@ -1,0 +1,16 @@
+{
+	"compilerOptions": {
+		"moduleResolution": "node",
+		"allowSyntheticDefaultImports": true,
+		"downlevelIteration": true,
+		"declaration": true,
+		"module": "es6",
+		"target": "es6",
+		"sourceMap": true,
+		"lib": ["es2020", "es6", "DOM", "ESNext"],
+		"rootDir": "src",
+		"outDir": "dist",
+		"jsx": "react",
+		"jsxFactory": "h"
+	}
+}
