@@ -24,6 +24,8 @@
   ],
   "author": "Moritz Clerc <moritzamando@protonmail.com>",
   "license": "ISC",
-  "devDependencies": {},
+  "devDependencies": {
+	  "typescript": "*"
+  },
   "dependencies": {}
 }

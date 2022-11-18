@@ -157,30 +157,9 @@ export interface CompilerOptions {
 	dataBindingRegex: RegExp
 }
 
-function hash(src: string) {
-	let hash = 0, i, chr
-	for (i = 0; i < src.length; i++) {
-		chr   = src.charCodeAt(i)
-		hash  = ((hash << 5) - hash) + chr
-		hash |= 0
-	}
-	return hash
-}
-
-const compiled = new Map<number, { (h: Function): VNode }>()
-
 export function compile(template: string, options: CompilerOptions) {
-	const templateHash = hash(template)
-	if (compiled.get(templateHash)) return compiled.get(templateHash)
-	const fn = compileNew(template, options)
-	compiled.set(templateHash, fn)
-	return fn
-}
-
-export function compileNew(template: string, options: CompilerOptions) {
 	template = template.replace(regex.comments, '')
 	const code = compileNode(parse(template, options.h)[0], options)
-	console.log(code)
 	const innerRender = saferEval('return ' + code)
 	return function renderTemplate(h: Function) {
 		const scope = Object.create(this)
